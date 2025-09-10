@@ -105,6 +105,8 @@ else:
         }
     }
 
+print("DEBUG PRODUCTION:", PRODUCTION)
+print("DEBUG DB CONFIG:", os.getenv("DB_HOST"), os.getenv("DB_NAME"), os.getenv("DB_USER"))
 
 
 
