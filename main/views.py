@@ -1,5 +1,7 @@
 import datetime
 
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from urllib3 import request
 from main.forms import NewsForm
