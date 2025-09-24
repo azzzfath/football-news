@@ -1,5 +1,5 @@
 from django.urls import path
-from main.views import logout_user, show_main, create_news, show_news, show_xml, show_json, show_xml_by_id, show_json_by_id, register, login_user
+from main.views import delete_news, edit_news, logout_user, show_main, create_news, show_news, show_xml, show_json, show_xml_by_id, show_json_by_id, register, login_user
 
 app_name = 'main'
 
@@ -9,6 +9,8 @@ urlpatterns = [
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
     path('create-news/', create_news, name='create_news'),
+    path('news/<uuid:id>/edit/', edit_news, name='edit_news'),
+    path('news/<uuid:id>/delete', delete_news, name='delete_news'),
     path('news/<str:id>/', show_news, name='show_news'),
     path('xml/', show_xml, name='show_xml'),
     path('json/', show_json, name='show_json'),
